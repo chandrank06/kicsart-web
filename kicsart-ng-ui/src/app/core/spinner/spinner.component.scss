@@ -1,0 +1,21 @@
+:host ::ng-deep {
+  .app-overlay {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    opacity: 0.3;
+    background: grey;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+  }
+  .spinner-grow {
+    position: fixed;
+    left: 45%;
+    top: 50%;
+    height: 5rem;
+    width: 5rem;
+  }
+}

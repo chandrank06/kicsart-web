@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { SpinnerService } from './spinner.service';
-import { Subscription } from 'rxjs/dist/types/internal/Subscription';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-spinner',
@@ -12,14 +12,13 @@ export class SpinnerComponent {
   loadingSubscription: Subscription;
   constructor(private spinnerService: SpinnerService) {
     this.loadingSubscription = new Subscription();
-  }
-  ngOnInit(): void {
     this.loadingSubscription = this.spinnerService.loadingStatus.subscribe(
       (status: boolean) => {
         this.showSpinner = status;
       }
     );
   }
+  ngOnInit(): void {}
   ngDestroy() {
     this.loadingSubscription.unsubscribe();
   }
