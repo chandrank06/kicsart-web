@@ -7,9 +7,11 @@ import { CoreModule } from './core/core.module';
 import { APP_BASE_HREF } from '@angular/common';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ServicesComponent } from './services/services.component';
+import { NavBarComponent } from './nav-bar/nav-bar.component';
+import { LandingBannerComponent } from './landing-banner/landing-banner.component';
 
 @NgModule({
-  declarations: [AppComponent, ServicesComponent],
+  declarations: [AppComponent, ServicesComponent, NavBarComponent, LandingBannerComponent],
   imports: [BrowserModule, AppRoutingModule, CoreModule, NgbModule],
   providers: [{ provide: APP_BASE_HREF, useValue: '/' }],
   bootstrap: [AppComponent]
