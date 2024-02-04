@@ -14,7 +14,7 @@ export class ServicesComponent {
   getServices() {
     this.services = [
       { title: 'Title 1', description: 'this is adescripiton 1' },
-      { title: 'Title 2', description: 'this is adescripiton 2' }
+      { title: 'Title 2', description: 'this is adescripiton 2' },{ title: 'Title 2', description: 'this is adescripiton 2' }
     ];
     this.servicesService.getAllServices().subscribe((result: any) => {
       this.services = result.services;
